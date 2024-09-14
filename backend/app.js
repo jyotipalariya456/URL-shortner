@@ -6,10 +6,13 @@ const app = express();
 
 // CORS Configuration
 app.use(cors({
-    origin: 'https://url-shortner-site.netlify.app/',
+    origin: 'https://url-shortner-site.netlify.app', // Removed trailing slash
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-   credentials:true
+    credentials: true
 }));
+
+// Handle preflight OPTIONS requests
+app.options('*', cors());
 
 // Middleware
 app.use(bodyParser.json());
