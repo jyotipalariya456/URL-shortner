@@ -6,7 +6,7 @@ const app = express();
 
 // CORS Configuration
 app.use(cors({
-    origin: '*',
+    origin: 'https://url-shortner-site.netlify.app/',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
    credentials:true
 }));
