@@ -4,11 +4,15 @@ document.getElementById('input-form').addEventListener('submit', async function(
     const urlToShorten = document.getElementById('hero-input').value;
     
     try {
-        const response = await fetch('https://url-shortner-site.netlify.app/shorten', {
+        const response = await fetch('https://url-shortner-tb8p.onrender.com/shorten', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+               
+                
             },
+            credentials: 'include',
+        
             body: JSON.stringify({ url: urlToShorten })
         });
 
